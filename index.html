@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ドラゴンクエストの魅力</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Yu Gothic",sans-serif;
+    background:#111827;
+    color:white;
+    line-height:1.8;
+}
+
+header{
+    background:linear-gradient(#001f54,#0d47a1);
+    text-align:center;
+    padding:60px 20px;
+    border-bottom:5px solid gold;
+}
+
+h1,h2{
+    font-family:'DotGothic16',sans-serif;
+}
+
+h1{
+    font-size:3rem;
+    color:#ffd700;
+    text-shadow:3px 3px 0 #000;
+}
+
+.subtitle{
+    margin-top:20px;
+    font-size:1.2rem;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:#111;
+    padding:15px;
+    border-bottom:2px solid gold;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    list-style:none;
+}
+
+nav a{
+    color:#ffd700;
+    text-decoration:none;
+    padding:8px 15px;
+    border:1px solid #ffd700;
+    border-radius:5px;
+}
+
+nav a:hover{
+    background:#ffd700;
+    color:black;
+}
+
+section{
+    padding:60px 10%;
+}
+
+h2{
+    margin-bottom:25px;
+    color:#ffd700;
+    font-size:2rem;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    padding:25px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.image-placeholder{
+    width:100%;
+    height:250px;
+    background:#333;
+    border:3px dashed #999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:15px;
+    font-size:1.1rem;
+}
+
+.level-btn{
+    background:#00c853;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    font-size:1.2rem;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.level-btn:hover{
+    background:#00e676;
+}
+
+.job-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.magic{
+    background:#263238;
+    padding:20px;
+    border-radius:10px;
+}
+
+.cave{
+    background:linear-gradient(#000,#1c1c1c,#111);
+}
+
+.tower{
+    background:linear-gradient(#0d47a1,#1e3a5f,#000);
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#000;
+    border-top:3px solid gold;
+}
+
+.highlight{
+    color:#ffeb3b;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>ドラゴンクエストの魅力</h1>
+    <p class="subtitle">
+        レベルアップ、転職、魔法、ダンジョン攻略――
+        ドラクエの楽しさを紹介！
+    </p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#level">レベル上げ</a></li>
+        <li><a href="#job">職業</a></li>
+        <li><a href="#magic">魔法・特技</a></li>
+        <li><a href="#cave">洞窟</a></li>
+        <li><a href="#tower">塔</a></li>
+    </ul>
+</nav>
+
+<section id="level">
+    <h2>レベル上げの楽しさ</h2>
+
+    <div class="card">
+        <p>
+            ドラクエの醍醐味の一つが
+            <span class="highlight">レベル上げ</span>。
+            モンスターとの戦いを重ねることで、
+            キャラクターはどんどん強くなります。
+        </p>
+
+        <p>
+            強敵を倒せるようになったり、
+            新しい魔法を覚えたりする瞬間は最高です。
+        </p>
+
+        <br>
+
+        <button class="level-btn" onclick="playLevelUp()">
+            レベルアップ！
+        </button>
+    </div>
+</section>
+
+<section id="job">
+    <h2>転職システムの楽しさ</h2>
+
+    <div class="card">
+        <p>
+            ドラクエ3・6・7では、
+            <span class="highlight">転職システム</span>
+            が登場します。
+        </p>
+
+        <p>
+            様々な職業を極めることで、
+            魔法や特技を習得できます。
+            多くの職業を経験するほど、
+            キャラクターの可能性が広がります。
+        </p>
+    </div>
+
+    <div class="job-grid">
+
+        <div class="card">
+            <h3>戦士</h3>
+            <p>高い攻撃力と守備力で前線を支える。</p>
+        </div>
+
+        <div class="card">
+            <h3>魔法使い</h3>
+            <p>メラやイオなど強力な攻撃魔法を使う。</p>
+        </div>
+
+        <div class="card">
+            <h3>僧侶</h3>
+            <p>回復と補助のスペシャリスト。</p>
+        </div>
+
+        <div class="card">
+            <h3>武闘家</h3>
+            <p>高い素早さと会心の一撃が魅力。</p>
+        </div>
+
+        <div class="card">
+            <h3>賢者</h3>
+            <p>攻撃も回復もできる万能職。</p>
+        </div>
+
+        <div class="card">
+            <h3>勇者</h3>
+            <p>ドラクエを代表する特別な職業。</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="magic">
+    <h2>面白い魔法・特技</h2>
+
+    <div class="job-grid">
+
+        <div class="magic">
+            <h3>パルプンテ</h3>
+            <p>
+                何が起こるか分からない！
+                味方も敵も驚く予測不能の魔法。
+            </p>
+        </div>
+
+        <div class="magic">
+            <h3>モシャス</h3>
+            <p>
+                仲間や敵に変身できる
+                ユニークな魔法。
+            </p>
+        </div>
+
+        <div class="magic">
+            <h3>ベギラゴン</h3>
+            <p>
+                敵全体に大ダメージを与える
+                強力な攻撃呪文。
+            </p>
+        </div>
+
+        <div class="magic">
+            <h3>ギガスラッシュ</h3>
+            <p>
+                勇者らしい迫力満点の必殺技。
+            </p>
+        </div>
+
+        <div class="magic">
+            <h3>足ばらい</h3>
+            <p>
+                相手を転ばせる技。
+                成功すると少し笑ってしまうことも。
+            </p>
+        </div>
+
+        <div class="magic">
+            <h3>しんくうは</h3>
+            <p>
+                武器に頼らず敵全体を攻撃。
+            </p>
+        </div>
+
+    </div>
+
+    <div class="image-placeholder">
+        魔法・特技の画像を配置
+    </div>
+
+</section>
+
+<section id="cave" class="cave">
+    <h2>洞窟攻略の魅力</h2>
+
+    <div class="card">
+        <p>
+            洞窟は暗く、
+            迷いやすく、
+            強敵も出現します。
+        </p>
+
+        <p>
+            「あと少しで出口か？」
+            という緊張感が続き、
+            最深部へ到達した時の達成感は格別です。
+        </p>
+
+        <div class="image-placeholder">
+            洞窟の画像を配置
+        </div>
+    </div>
+</section>
+
+<section id="tower" class="tower">
+    <h2>塔攻略の魅力</h2>
+
+    <div class="card">
+        <p>
+            塔では上へ上へと進みながら、
+            強敵や仕掛けを突破していきます。
+        </p>
+
+        <p>
+            空へ近づいていく高揚感と、
+            ボス戦前の不気味な雰囲気が魅力です。
+        </p>
+
+        <div class="image-placeholder">
+            塔の画像を配置
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>戦闘シーン</h2>
+
+    <div class="card">
+        <p>
+            ドラクエの戦闘では、
+            魔法や特技を駆使して戦います。
+        </p>
+
+        <div class="image-placeholder">
+            戦闘画面の画像を配置
+        </div>
+    </div>
+</section>
+
+<footer>
+    <h2>さあ、冒険へ！</h2>
+    <p>
+        レベルを上げ、職業を極め、
+        強力な魔法や特技を覚えよう！
+    </p>
+</footer>
+
+<script>
+function playLevelUp(){
+
+    const audioContext =
+        new (window.AudioContext || window.webkitAudioContext)();
+
+    const notes = [523,659,784];
+
+    let time = audioContext.currentTime;
+
+    notes.forEach(freq => {
+
+        const osc = audioContext.createOscillator();
+        const gain = audioContext.createGain();
+
+        osc.type = "square";
+        osc.frequency.value = freq;
+
+        osc.connect(gain);
+        gain.connect(audioContext.destination);
+
+        gain.gain.setValueAtTime(0.15,time);
+
+        osc.start(time);
+        osc.stop(time+0.18);
+
+        time += 0.18;
+    });
+
+}
+</script>
+
+</body>
+</html>
